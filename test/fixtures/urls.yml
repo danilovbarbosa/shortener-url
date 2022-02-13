@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  default_url: MyString
+  short_url: MyString
+  numbers_access: 1
+  user: one
+
+two:
+  default_url: MyString
+  short_url: MyString
+  numbers_access: 1
+  user: two

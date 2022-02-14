@@ -179,6 +179,8 @@ GEM
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2)
     semantic_range (3.0.0)
+    shortener (0.8.2)
+      voight_kampff (~> 1.1.2)
     simple_form (5.1.0)
       actionpack (>= 5.2)
       activemodel (>= 5.2)
@@ -198,6 +200,8 @@ GEM
     turbolinks-source (5.2.0)
     tzinfo (2.0.4)
       concurrent-ruby (~> 1.0)
+    voight_kampff (1.1.4)
+      rack (>= 1.4, < 3.0)
     warden (1.2.9)
       rack (>= 2.0.9)
     web-console (4.2.0)
@@ -237,6 +241,7 @@ DEPENDENCIES
   rails (~> 6.1.4, >= 6.1.4.6)
   sass-rails (>= 6)
   selenium-webdriver
+  shortener
   simple_form
   spring
   sqlite3 (~> 1.4)

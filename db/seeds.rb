@@ -5,3 +5,14 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+# Run code in path db/seeds
+ActiveRecord::Base.transaction do
+    ['common', Rails.env].each do |seed|
+      file = "#{Rails.root}/db/seeds/#{seed}.rb"
+      if File.exists?(file)
+        puts "Not finding nd the file: #{file}"
+        require file
+      end
+    end
+  end

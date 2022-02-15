@@ -11,6 +11,9 @@
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="#">See links</a>
           </li>
+          <li class="nav-item">
+            <%= link_to "Exit", destroy_user_session_path, method: :delete, class: "nav-link active" %>
+          </li>
         </ul>
 
       </div>
@@ -21,18 +24,17 @@
 <!-- Begin page content -->
 <main class="flex-shrink-0">
   <div class="container">
-
-        <div class="mb-3">
-            <form class="d-flex">
-                <input class="form-control form-control-lg" type="text" placeholder="Url" aria-label="Url">
-                <button class="btn btn-outline-primary" type="submit">Shorten</button>
-            </form>
-        </div>
+    <div class="mb-3">
+      <%= form_with(url: "/shorten", method: "post", class: "d-flex") do %>
+        <%= text_field_tag 'input_url', nil, placeholder: "Enter your long url", class: "form-control form-control-lg"  %>
+        <%= submit_tag "Shorten", class: "btn btn-outline-primary" %>
+      <% end %>
+    </div>
   </div>
 </main>
 
-<footer class="footer mt-auto py-3 bg-light">
+<%# <footer class="footer mt-auto py-3 bg-light">
   <div class="container">
     <span class="text-muted">Place sticky footer content here.</span>
   </div>
-</footer>
+</footer> %>

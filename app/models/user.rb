@@ -9,6 +9,6 @@ class User < ApplicationRecord
         :trackable
         :validatable
   
-  has_many :shortened_urls
-  
+  has_shortened_urls
+
 end

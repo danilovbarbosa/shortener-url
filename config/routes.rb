@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   post "shorten" => "home#shorten"
   
   devise_for :users
+  
   get 'shortener/:id' => "shortener/shortened_urls#show"
 
 end

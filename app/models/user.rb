@@ -10,4 +10,7 @@ class User < ApplicationRecord
   
   has_shortened_urls
 
+  validates :name, presence: true
+  validates :username, presence: true
+
 end

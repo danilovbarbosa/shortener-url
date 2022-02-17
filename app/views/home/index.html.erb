@@ -10,6 +10,9 @@
         <ul class="navbar-nav me-auto mb-2 mb-md-0">
           <li class="nav-item">
             <%= link_to "Links", links_path, class: "nav-link active" %>
+          </li>          
+          <li class="nav-item">
+            <%= link_to 'Edit Profile', edit_user_registration_path , class: "nav-link active" %>
           </li>
           <li class="nav-item">
             <%= link_to "Exit", destroy_user_session_path, method: :delete, class: "nav-link active" %>

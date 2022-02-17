@@ -18,7 +18,6 @@ class HomeController < ApplicationController
   end
   
   def links
-    # byebug
     @base_url = "#{request.base_url}/shortener/"
     @links = current_user.shortened_urls
   end

@@ -27,7 +27,7 @@
     <div class="mb-3">
         <h1>Links to <%= @current_user.email %></h1>
 
-        <table class="table">
+        <table class="table table-striped">
         <thead>
             <tr>
             <th>Link</th>
@@ -40,7 +40,7 @@
             <% @links.each do |link| %>
             <tr>
                 <td><%= link.url %></td>
-                <td>a</td>
+                <td><%= link.use_count %></td>
                 <td>a</td>
                 <td>a</td>
                 <td>a</td>

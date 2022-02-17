@@ -9,7 +9,7 @@ class HomeController < ApplicationController
       if params.has_key? required and not params[required].blank?
         shortened_url = Shortener::ShortenedUrl.generate(params[required], owner: current_user)
         flash.now[:notice] = "URL shortened successfully."
-        format.html { redirect_to root_path }
+        format.html { redirect_to links_path }
         format.json { head :no_content }
       else
         form_complete = false

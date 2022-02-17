@@ -205,6 +205,8 @@ GEM
     semantic_range (3.0.0)
     shortener (0.8.2)
       voight_kampff (~> 1.1.2)
+    shoulda-matchers (5.0.0)
+      activesupport (>= 5.2.0)
     simple_form (5.1.0)
       actionpack (>= 5.2)
       activemodel (>= 5.2)
@@ -269,6 +271,7 @@ DEPENDENCIES
   sass-rails (>= 6)
   selenium-webdriver
   shortener
+  shoulda-matchers (~> 5.0)
   simple_form
   spring
   sqlite3 (~> 1.4)

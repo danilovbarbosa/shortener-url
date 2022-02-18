@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
-  root to: "urls#index"
-
-  devise_for :users
-  resources :urls
-
-  get 'home/index'
   
+  root to: "home#index"
+  post "shorten" => "home#shorten"
+  get "links" => "home#links"
+  
+  devise_for :users
+  
+  get 'shortener/:id' => "shortener/shortened_urls#show"
+
 end

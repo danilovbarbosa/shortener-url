@@ -28,16 +28,35 @@
 <main class="flex-shrink-0">
   <div class="container">
     <div class="mb-3">
-      <%= form_with(url: "/shorten", method: "post", class: "d-flex") do %>
-        <%= text_field_tag 'input_url', nil, placeholder: "Enter your long url", class: "form-control form-control-lg"  %>
-        <%= submit_tag "Shorten", class: "btn btn-outline-primary" %>
-      <% end %>
+        <h1>Links to <%= @current_user.name %></h1>
+        <br>
+        <p>* To use shortened link, set the <b>shortener/key</b> in url. Example: https://www.olistshortner/<b>shortener/olist123</b> </p>
+        <br>
+        <table class="table table-striped">
+        <thead>
+            <tr>
+            <th>Link</th>
+            <th>Key to shortened link</th>
+            <th>Number of views</th>
+            <th>Created at</th>
+            <th>Updated at</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <% @links.each do |link| %>
+            <tr>
+                <td><%= link.url %></td>
+                <td><a href="<%= @base_url %><%= link.unique_key %>"><%= @base_url %><%= link.unique_key %></a></td>
+                <td><%= link.use_count %></td>
+                <td><%= link.created_at %></td>
+                <td><%= link.updated_at %></td>
+            </tr>
+            <% end %>
+        </tbody>
+        </table>
+
+        <br>    
     </div>
   </div>
 </main>
-
-<%# <footer class="footer mt-auto py-3 bg-light">
-  <div class="container">
-    <span class="text-muted">Place sticky footer content here.</span>
-  </div>
-</footer> %>

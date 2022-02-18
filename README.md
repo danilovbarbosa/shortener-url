@@ -1,24 +1,60 @@
-# README
+# Shortener url
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Shortener url is system to shortener url.
 
-Things you may want to cover:
+## AWS architecture
 
-* Ruby version
+<img src="repo/images/test-arquitetura.jpg" alt="AWS architecture">
+
+## Overview
+
+The software consists:
+
+* CRUD to User (with authentication) and shortener url write in Ruby on Rails 6.
+
+### Dependencies
+
+* Ruby  version
+  * 3.0.1, see [ruby version](.ruby-version)
 
 * System dependencies
+  * All dependencies are available at [Gemfile](Gemfile).
 
-* Configuration
+### To run
+
+* Local
+
+    ```sh
+    $ bundle install
+    $ rails s
+    ```
+
+* Docker-compose
+
+    ```sh
+    $ docker-compose up --build
+    ```
+
+* Docker hub
+
+    ```sh
+    $ docker pull danilovbarbosa/test-shortner-url:0.1.0
+    $ docker run -it -p 80:3000 --name test-shortner-url danilovbarbosa/test-shortner-url:0.1.0
+    ```
 
 * Database creation
 
-* Database initialization
+    ```sh
+    $ rails db:create
+    $ rails db:migrate
+    $ rails db:seed
+    ```
 
 * How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+    * Rspec (model, controller, ...)
 
-* Deployment instructions
+        ```sh
+        $ rspec
+        ```
 
-* ...

@@ -1,0 +1,43 @@
+<header>
+  <!-- Fixed navbar -->
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container-fluid">
+      <%= link_to "Olist shortene", root_path, class: "navbar-brand" %>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <%= link_to "Links", links_path, class: "nav-link active" %>
+          </li>          
+          <li class="nav-item">
+            <%= link_to 'Edit Profile', edit_user_registration_path , class: "nav-link active" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "Exit", destroy_user_session_path, method: :delete, class: "nav-link active" %>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!-- Begin page content -->
+<main class="flex-shrink-0">
+  <div class="container">
+    <div class="mb-3">
+      <%= form_with(url: "/shorten", method: "post", class: "d-flex") do %>
+        <%= text_field_tag 'input_url', nil, placeholder: "Enter your long url", class: "form-control form-control-lg"  %>
+        <%= submit_tag "Shorten", class: "btn btn-outline-primary" %>
+      <% end %>
+    </div>
+  </div>
+</main>
+
+<%# <footer class="footer mt-auto py-3 bg-light">
+  <div class="container">
+    <span class="text-muted">Place sticky footer content here.</span>
+  </div>
+</footer> %>

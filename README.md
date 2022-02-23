@@ -2,10 +2,6 @@
 
 Shortener url is system to shortener url.
 
-## AWS architecture
-
-<img src="repo/images/test-arquitetura.jpg" alt="AWS architecture">
-
 ## Overview
 
 The software consists:
